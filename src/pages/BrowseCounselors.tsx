@@ -169,7 +169,7 @@ const BrowseCounselors = () => {
 
       {/* Search and Filter Toggle */}
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
-        <div className="relative w-full md:w-1/2 -z-10">
+        <div className="relative w-full md:w-1/2">
           <input
             type="text"
             placeholder="Search counselors by name, credentials, specialties..."

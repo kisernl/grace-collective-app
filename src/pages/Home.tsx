@@ -69,7 +69,7 @@ const Home = () => {
               </h3>
               <p className="mt-2 text-gray-600">
                 Browse our directory of qualified biblical counselors and find
-                someone who meets your specific needs.
+                someone who is a good match for your specific needs.
               </p>
             </div>
 
@@ -83,8 +83,8 @@ const Home = () => {
                 Schedule a Session
               </h3>
               <p className="mt-2 text-gray-600">
-                Choose a time that works for you and book your appointment
-                directly through our platform.
+                Choose a time that works for you and book your introductory
+                appointment directly through our platform.
               </p>
             </div>
 
@@ -98,8 +98,8 @@ const Home = () => {
                 Meet Online
               </h3>
               <p className="mt-2 text-gray-600">
-                Connect with your counselor through our secure video platform
-                for guidance and support.
+                Connect with your counselor for guidance and support through a
+                single url shared directly to your email and calendar.
               </p>
             </div>
           </div>
@@ -149,10 +149,18 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold font-serif text-gray-900">
-              Why Choose Biblical Counseling
+              Why Choose{" "}
+              <span className="text-primary inline-flex items-center">
+                Grace Collective
+                <img
+                  src="/images/Leaf_Logo.png"
+                  alt="Logo"
+                  className="h-8 w-8 mx-1 inline-block"
+                />
+              </span>
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Scripture-based guidance for navigating life's challenges
+              Gospel-focused guidance for navigating life's challenges
             </p>
           </div>
 
@@ -164,7 +172,7 @@ const Home = () => {
                 </div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 text-center">
-                Scripture-Centered
+                Christ-Centered
               </h3>
               <p className="mt-4 text-gray-600 text-center">
                 Our counselors are committed to providing guidance anchored in
@@ -183,7 +191,7 @@ const Home = () => {
               </h3>
               <p className="mt-4 text-gray-600 text-center">
                 Meet with your counselor from the comfort of your home with our
-                flexible online scheduling.
+                flexible online scheduling and simple video meeting integration.
               </p>
             </div>
 
@@ -194,17 +202,48 @@ const Home = () => {
                 </div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 text-center">
-                Ongoing Support
+                Find the Right Fit
               </h3>
               <p className="mt-4 text-gray-600 text-center">
-                Maintain connection with your counselor through secure messaging
-                between sessions.
+                Search for a counselor that best fits your needs and
+                preferences. If the fit isn't right, you can reach out to
+                another counselor.
               </p>
             </div>
           </div>
 
-          <div className="mt-12 text-center">
-            <Link to="/join" className="btn-secondary inline-flex items-center">
+          {/* <div className="my-12 text-center flex-col sm:gap-6 md:flex-row justify-center">
+            <div className="">
+              <Link
+                to="/counselors"
+                className="btn-primary inline-flex items-center"
+              >
+                Find your Counselor
+                <ArrowRight size={18} className="ml-2" />
+              </Link>
+            </div>
+            <div className="">
+              <Link
+                to="/join"
+                className="btn-secondary inline-flex items-center"
+              >
+                Join as a Counselor
+                <ArrowRight size={18} className="ml-2" />
+              </Link>
+            </div>
+          </div> */}
+          <div className="my-12 text-center flex flex-col md:flex-row md:justify-center gap-4">
+            <Link
+              to="/counselors"
+              className="btn-primary flex justify-center items-center px-6 py-3 w-full md:w-auto"
+            >
+              Find your Counselor
+              <ArrowRight size={18} className="ml-2" />
+            </Link>
+            <Link
+              to="/join"
+              className="btn-secondary flex justify-center items-center px-6 py-3 w-full md:w-auto"
+            >
               Join as a Counselor
               <ArrowRight size={18} className="ml-2" />
             </Link>

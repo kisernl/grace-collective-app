@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-1000">
+    <nav className="bg-white shadow-sm sticky top-0 z-[1100]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -50,7 +50,8 @@ const Navbar = () => {
               {user?.role === "counselor" && (
                 <Link
                   to="/dashboard/counselor"
-                  className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900"
+                  //className="btn-secondary inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900"
+                  className="btn-secondary text-sm font-medium"
                 >
                   Dashboard
                 </Link>
@@ -58,7 +59,8 @@ const Navbar = () => {
               {user?.role === "admin" && (
                 <Link
                   to="/dashboard/admin"
-                  className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900"
+                  // className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900"
+                  className="btn-primary text-sm font-medium"
                 >
                   Admin
                 </Link>
@@ -107,7 +109,7 @@ const Navbar = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="sm:hidden fixed bg-white w-full top-16 pb-4 left-0 shadow-lg z-100">
+        <div className="fixed sm:hidden fixed bg-white w-full top-16 pb-4 left-0 shadow-lg z-1000">
           <div className="pt-2 pb-6 space-y-1">
             <Link
               to="/"
@@ -130,7 +132,8 @@ const Navbar = () => {
             {user?.role === "counselor" && (
               <Link
                 to="/dashboard/counselor"
-                className="block pl-3 pr-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50"
+                //className="block pl-3 pr-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50"
+                className="btn-secondary block"
               >
                 Dashboard
               </Link>
@@ -144,7 +147,7 @@ const Navbar = () => {
               </Link>
             )}
           </div>
-          <div className="pt-4 pb-3 border-t border-gray-200">
+          <div className="pt-4 pb-3 border-t border-gray-200 z-100">
             {user ? (
               <>
                 <div className="flex items-center px-4">
@@ -172,10 +175,11 @@ const Navbar = () => {
                 </div>
               </>
             ) : (
-              <div className="px-4 py-2 space-y-2">
+              <div className="px-4 py-2 space-y-2 z-100">
                 <Link
                   to="/login"
-                  className="block text-base font-medium text-gray-500 hover:text-gray-800"
+                  //className="block text-base font-medium text-gray-500 hover:text-gray-800"
+                  className="block text-base font-medium btn-secondary w-full text-center"
                 >
                   Login
                 </Link>
