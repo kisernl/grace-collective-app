@@ -18,11 +18,6 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/" className="text-gray-600 hover:text-primary">
-                  Home
-                </a>
-              </li>
-              <li>
                 <a
                   href="/counselors"
                   className="text-gray-600 hover:text-primary"
@@ -43,7 +38,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h4 className="text-md font-medium text-gray-800 mb-4">Contact</h4>
+            <h4 className="text-md font-medium text-gray-800 mb-4">Info</h4>
             {/* <p className="text-sm text-gray-600 mb-2">
               For support:{" "}
               <a
@@ -53,15 +48,26 @@ const Footer = () => {
                 support@gracecollective.co
               </a>
             </p> */}
-            <p className="text-sm text-gray-600">
-              {/* For general inquiries:{" "} */}
-              <a
-                href="mailto:info@biblicalcounseling.com"
-                className="text-primary hover:underline"
-              >
-                info@gracecollective.co
-              </a>
-            </p>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="/about" className="text-gray-600 hover:text-primary">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/statement"
+                  className="text-gray-600 hover:text-primary"
+                >
+                  Statement of Faith
+                </a>
+              </li>
+              <li>
+                <a href="/Contact" className="text-gray-600 hover:text-primary">
+                  Contact Us
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-200">

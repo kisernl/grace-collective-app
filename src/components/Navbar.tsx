@@ -111,15 +111,15 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="fixed sm:hidden fixed bg-white w-full top-16 pb-4 left-0 shadow-lg z-1000">
           <div className="pt-2 pb-6 space-y-1">
-            <Link
+            {/* <Link
               to="/"
               className="block pl-3 pr-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50"
             >
               Home
-            </Link>
+            </Link> */}
             <Link
               to="/counselors"
-              className="block pl-3 pr-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50"
+              className="block pl-3 pr-4 py-2 pt-6 text-base font-medium text-gray-700 hover:bg-gray-50"
             >
               Find a Counselor
             </Link>
@@ -175,7 +175,7 @@ const Navbar = () => {
                 </div>
               </>
             ) : (
-              <div className="px-4 py-2 space-y-2 z-100">
+              <div className="px-4 py-2 space-y-6 z-100">
                 <Link
                   to="/login"
                   //className="block text-base font-medium text-gray-500 hover:text-gray-800"
