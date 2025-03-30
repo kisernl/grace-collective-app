@@ -10,66 +10,66 @@ export default defineConfig({
 
       // ref: https://vite.dev/guide/api-plugin.html#transformindexhtml
       transformIndexHtml(html) {
-        if (process.env.NODE_ENV !== "development" && process.env.SHOW_WATERMARK !== "false") {
-          return [
-            {
-              tag: "style",
-              attrs: { type: "text/css" },
-              injectTo: "head",
-              children: `
-                .mocha-watermark {
-                  position: fixed;
-                  bottom: 16px;
-                  right: 16px;
-                  background: white;
-                  border-radius: 8px;
-                  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                  display: flex;
-                  align-items: center;
-                  padding: 8px 12px;
-                  z-index: 9999;
-                  font-family: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-                  font-size: 14px;
-                  font-weight: 600;
-                  color: #000;
-                  gap: 8px;
-                  border: 1px solid #e6e6e6;
-                  background: linear-gradient(to bottom, #FFFFFF, #F9F9F9);
-                  cursor: pointer;
-                  transition: all 0.2s ease-in-out;
-                }
-                .mocha-watermark:hover {
-                  transform: translateY(-2px);
-                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                }
-                .mocha-watermark:active {
-                  transform: translateY(0);
-                  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                }
-                .mocha-watermark img {
-                  width: 16px;
-                  height: 16px;
-                }
-              `,
-            },
-            {
-              tag: "script",
-              attrs: { type: "module" },
-              injectTo: "body",
-              children: `
-                const watermark = document.createElement('a');
-                watermark.href = 'https://getmocha.com?a_id=' + encodeURIComponent('0195e1e1-c919-7c09-92bd-b2be2079b821');
-                watermark.target = '_blank';
-                watermark.className = 'mocha-watermark';
-                watermark.innerHTML = \`
-                  <img src="https://mocha-cdn.com/favicon.svg" alt="Mocha Logo" />
-                  Made in Mocha
-                \`;
-                document.body.appendChild(watermark);
-              `,
-            },
-          ];
-        }
+        // if (process.env.NODE_ENV !== "development" && process.env.SHOW_WATERMARK !== "false") {
+        //   return [
+        //     {
+        //       tag: "style",
+        //       attrs: { type: "text/css" },
+        //       injectTo: "head",
+        //       children: `
+        //         .mocha-watermark {
+        //           position: fixed;
+        //           bottom: 16px;
+        //           right: 16px;
+        //           background: white;
+        //           border-radius: 8px;
+        //           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        //           display: flex;
+        //           align-items: center;
+        //           padding: 8px 12px;
+        //           z-index: 9999;
+        //           font-family: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        //           font-size: 14px;
+        //           font-weight: 600;
+        //           color: #000;
+        //           gap: 8px;
+        //           border: 1px solid #e6e6e6;
+        //           background: linear-gradient(to bottom, #FFFFFF, #F9F9F9);
+        //           cursor: pointer;
+        //           transition: all 0.2s ease-in-out;
+        //         }
+        //         .mocha-watermark:hover {
+        //           transform: translateY(-2px);
+        //           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        //         }
+        //         .mocha-watermark:active {
+        //           transform: translateY(0);
+        //           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        //         }
+        //         .mocha-watermark img {
+        //           width: 16px;
+        //           height: 16px;
+        //         }
+        //       `,
+        //     },
+        //     {
+        //       tag: "script",
+        //       attrs: { type: "module" },
+        //       injectTo: "body",
+        //       children: `
+        //         const watermark = document.createElement('a');
+        //         watermark.href = 'https://getmocha.com?a_id=' + encodeURIComponent('0195e1e1-c919-7c09-92bd-b2be2079b821');
+        //         watermark.target = '_blank';
+        //         watermark.className = 'mocha-watermark';
+        //         watermark.innerHTML = \`
+        //           <img src="https://mocha-cdn.com/favicon.svg" alt="Mocha Logo" />
+        //           Made in Mocha
+        //         \`;
+        //         document.body.appendChild(watermark);
+        //       `,
+        //     },
+        //   ];
+        // }
 
         return [
           {
